@@ -6,9 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Mail, Phone, Linkedin } from "lucide-react"
 import Image from "next/image"
 
 export default function ContactForm() {
@@ -37,12 +35,6 @@ export default function ContactForm() {
     }))
   }
 
-  const handleCheckboxChange = (checked: boolean) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      consent: checked,
-    }))
-  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -88,7 +80,7 @@ export default function ContactForm() {
       {/* Left side - Form */}
       <div className="w-full lg:w-3/5 bg-white p-8 relative">
         <div className="max-w-md mx-auto">
-          <h1 className="text-3xl font-bold mb-8 text-gray-800">Let's talk!</h1>
+          <h1 className="text-3xl font-bold mb-8 text-gray-800">Lets talk!</h1>
 
           <form onSubmit={handleSubmit}>
             <div className="mb-5">

@@ -20,7 +20,7 @@ interface CaseStudyProps {
   onAllCasesClick?: () => void
 }
 
-export function CaseStudy({ projects, subtitle = "Portfolio", onDetailsClick, onAllCasesClick }: CaseStudyProps) {
+export function CaseStudy({ projects, subtitle = "Portfolio",}: CaseStudyProps) {
   const [activeProject, setActiveProject] = useState(0)
   const [autoPlay, setAutoPlay] = useState(true)
   const currentProject = projects[activeProject]
