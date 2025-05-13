@@ -63,7 +63,7 @@ const slides = [
     title: "Software Engineering",
     description:
       "Building robust, scalable software solutions with cutting-edge technologies to solve complex business challenges.",
-    bgColor: "bg-white",
+    bgColor: "bg-white dark:bg-black dark:text-white",
     heroImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1476&auto=format&fit=crop",
     heroImage2: "/girsl.png",
     Photo: "/Yveslupitu.png",
@@ -74,7 +74,7 @@ const slides = [
     title: "Product Design",
     description:
       "Designing innovative products that exceed your expectations, focused on quality, user experience and customer satisfaction. And therefore speeding up your growth.",
-    bgColor: "bg-white",
+    bgColor: "bg-white dark:bg-black dark:text-white",
     heroImage2: "/bo.png",
     heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop",
     Photo: "/Yveslupitu.png",
@@ -85,7 +85,7 @@ const slides = [
     title: "Data Science & AI",
     description:
       "Leveraging advanced analytics and artificial intelligence to extract valuable insights and drive data-informed decisions.",
-    bgColor: "bg-white",
+    bgColor: "bg-white dark:bg-black dark:text-white",
     heroImage2: "/girl2.png",
     heroImage: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1470&auto=format&fit=crop",
     Photo: "/Yveslupitu.png",
@@ -96,7 +96,7 @@ const slides = [
     title: "Consulting",
     description:
       "Strategic guidance and expert advice to optimize your business processes, technology stack, and digital transformation journey.",
-    bgColor: "bg-white",
+    bgColor: "bg-white dark:bg-black dark:text-white",
     heroImage2: "/girl3.png",
     heroImage: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=1470&auto=format&fit=crop",
     Photo: "/Yveslupitu.png",
@@ -129,7 +129,7 @@ export default function HomepageCarousel() {
 
   return (
  <>
-    <div className="relative w-full h-[500px] md:h-[600px] overflow-x-hidden">
+    <div className="relative w-full mt-5 h-[500px] md:h-[600px] overflow-x-hidden">
       
       {/* Slides */}
       {slides.map((slide, index) => (
@@ -163,10 +163,10 @@ export default function HomepageCarousel() {
       <div className="absolute bottom-10 right-[100px] w-96 h-96 bg-cyan-400 opacity-20 rounded-full filter blur-2xl -z-10"></div>
 
               <div className="flex flex-col justify-center z-10">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">{slide.title}</h2>
-                <p className="text-black-100 mb-8 max-w-lg">{slide.description}</p>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold dark:text-white text-black mb-6">{slide.title}</h2>
+                <p className="dark:text-white text-black-100 mb-8 max-w-lg">{slide.description}</p>
                 <div>
-                  <Button className="bg-[#07b6d5] hover:bg-[#07b6d5]/50 text-black font-medium rounded-full px-8">
+                  <Button className="bg-[#07b6d5] hover:bg-[#07b6d5]/50 dark:text-white text-black font-medium rounded-full px-8">
                     Learn more
                   </Button>
                 </div>
@@ -230,7 +230,7 @@ export default function HomepageCarousel() {
           <Button
             variant="ghost"
             size="icon"
-            className="h-12 w-12 text-black opacity-70 hover:opacity-100"
+            className="h-12 w-12 dark:text-white text-black opacity-70 hover:opacity-100"
             onClick={togglePlayPause}
           >
             {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
@@ -245,8 +245,8 @@ export default function HomepageCarousel() {
                 className={cn(
                   "py-4 text-center transition-all border-t-2 text-sm md:text-base",
                   currentSlide === index
-                    ? "text-black border-black font-medium"
-                    : "text-black-200 border-transparent hover:text-black-200",
+                    ? "dark:text-white text-black border-black font-medium"
+                    : "dark:text-white text-black-200 border-transparent hover:dark:text-white text-black-200",
                 )}
               >
                 {slide.title}

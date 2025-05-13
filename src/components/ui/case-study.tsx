@@ -54,7 +54,7 @@ export function CaseStudy({ projects, subtitle = "Portfolio",}: CaseStudyProps) 
             key={index}
             className={cn(
               "w-12 h-12 rounded-full flex items-center justify-center mb-4 text-lg font-medium transition-colors",
-              activeProject === index ? "bg-gray-900 text-white" : "text-gray-400 hover:text-gray-700",
+              activeProject === index ? "dark:bg-white bg-gray-900 dark:text-black text-white" : "dark:text-white text-gray-400 hover:dark:text-black ",
             )}
             onClick={() => {
               setActiveProject(index)
@@ -67,7 +67,7 @@ export function CaseStudy({ projects, subtitle = "Portfolio",}: CaseStudyProps) 
         ))}
 
         <button
-          className="w-12 h-12 rounded-full flex items-center justify-center mt-4 text-gray-700 hover:bg-gray-200 transition-colors"
+          className="w-12 h-12 rounded-full flex items-center justify-center mt-4 dark:text-white text-gray-700 hover:bg-gray-200 transition-colors"
           onClick={() => setAutoPlay(!autoPlay)}
           aria-label={autoPlay ? "Pause auto-play" : "Start auto-play"}
         >
@@ -109,8 +109,8 @@ export function CaseStudy({ projects, subtitle = "Portfolio",}: CaseStudyProps) 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center flex-1">
         <div className="space-y-6">
           <div className="space-y-2">
-            <h2 className="text-gray-500 font-medium">{subtitle}</h2>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            <h2 className="dark:text-white text-gray-500 font-medium">{subtitle}</h2>
+            <h1 className="text-4xl md:text-5xl font-bold dark:text-white text-gray-900">
               {currentProject.title.split(" ").slice(0, -1).join(" ")}
               <br />
               {currentProject.title.split(" ").slice(-1)}
@@ -122,7 +122,7 @@ export function CaseStudy({ projects, subtitle = "Portfolio",}: CaseStudyProps) 
               <Badge
                 key={index}
                 variant="outline"
-                className="bg-gray-100 hover:bg-gray-100 text-gray-700 rounded-full px-4 py-1"
+                className="bg-gray-100 hover:bg-gray-100 dark:text-black text-gray-700 rounded-full px-4 py-1"
               >
                 {skill}
               </Badge>
@@ -135,7 +135,7 @@ export function CaseStudy({ projects, subtitle = "Portfolio",}: CaseStudyProps) 
                 <Badge
                   key={index}
                   variant="outline"
-                  className="bg-gray-100 hover:bg-gray-100 text-gray-700 rounded-full px-4 py-1"
+                  className="bg-gray-100 hover:bg-gray-100 dark:text-black text-gray-700 rounded-full px-4 py-1"
                 >
                   {skill}
                 </Badge>
@@ -143,7 +143,7 @@ export function CaseStudy({ projects, subtitle = "Portfolio",}: CaseStudyProps) 
             </div>
           )}
 
-          <p className="text-gray-700 leading-relaxed">{currentProject.description}</p>
+          <p className="dark:text-white text-gray-700 leading-relaxed">{currentProject.description}</p>
 
           {/* Progress indicator */}
           <div className="flex space-x-2 pt-4">

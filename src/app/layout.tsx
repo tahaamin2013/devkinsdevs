@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
+import Navbar from "@/components/header/navbar";
+import ThemeContextProvider from "@/context/ThemeContext";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-space-grotesk",
 });
 
 export const metadata: Metadata = {
@@ -27,10 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}
+        className={`${spaceGrotesk.variable} dark:text-white overflow-x-hidden antialiased`}
       >
-        {children}
-        <Footer />
+        <ThemeContextProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeContextProvider>
       </body>
     </html>
   );

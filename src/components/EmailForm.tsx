@@ -78,13 +78,13 @@ export default function ContactForm() {
   return (
     <div className="flex flex-col lg:flex-row w-full max-w-6xl  mx-auto overflow-hidden rounded-xl shadow-lg">
       {/* Left side - Form */}
-      <div className="w-full lg:w-3/5 bg-white p-8 relative">
+      <div className="w-full lg:w-3/5 bg-white dark:bg-black dark:text-white p-8 relative">
         <div className="max-w-md mx-auto">
-          <h1 className="text-3xl font-bold mb-8 text-gray-800">Lets talk!</h1>
+          <h1 className="text-3xl font-bold mb-8 dark:text-white text-gray-800">Lets talk!</h1>
 
           <form onSubmit={handleSubmit}>
             <div className="mb-5">
-              <Label htmlFor="name" className="text-sm text-gray-600">
+              <Label htmlFor="name" className="text-sm dark:text-black text-gray-600">
                 Name*
               </Label>
               <Input
@@ -100,7 +100,7 @@ export default function ContactForm() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
               <div>
-                <Label htmlFor="phone" className="text-sm text-gray-600">
+                <Label htmlFor="phone" className="text-sm dark:text-black text-gray-600">
                   Phone*
                 </Label>
                 <Input
@@ -114,7 +114,7 @@ export default function ContactForm() {
                 />
               </div>
               <div>
-                <Label htmlFor="email" className="text-sm text-gray-600">
+                <Label htmlFor="email" className="text-sm dark:text-black text-gray-600">
                   Email*
                 </Label>
                 <Input
@@ -131,7 +131,7 @@ export default function ContactForm() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
               <div>
-                <Label htmlFor="industry" className="text-sm text-gray-600">
+                <Label htmlFor="industry" className="text-sm dark:text-black text-gray-600">
                   Industry*
                 </Label>
                 <Select onValueChange={(value) => handleSelectChange("industry", value)} value={formData.industry}>
@@ -148,7 +148,7 @@ export default function ContactForm() {
                 </Select>
               </div>
               <div>
-                <Label htmlFor="budget" className="text-sm text-gray-600">
+                <Label htmlFor="budget" className="text-sm dark:text-black text-gray-600">
                   Expected Budget*
                 </Label>
                 <Select onValueChange={(value) => handleSelectChange("budget", value)} value={formData.budget}>
@@ -166,7 +166,7 @@ export default function ContactForm() {
             </div>
 
             <div className="mb-5">
-              <Label htmlFor="message" className="text-sm text-gray-600">
+              <Label htmlFor="message" className="text-sm dark:text-black text-gray-600">
                 Message*
               </Label>
               <Textarea
@@ -183,7 +183,7 @@ export default function ContactForm() {
 
             <Button
               type="submit"
-              className="w-full bg-yellow-200 hover:bg-yellow-300 text-gray-800 font-medium rounded-full py-6"
+              className="w-full bg-yellow-200 hover:bg-yellow-300 dark:text-black text-gray-800 font-medium rounded-full py-6"
             >
               Send
             </Button>

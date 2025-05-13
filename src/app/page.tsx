@@ -10,7 +10,6 @@ export default function Home() {
       <AboutSection />
             <WhyChooseSection />
       <ContactForm />
-
     </div>
   );
 }
