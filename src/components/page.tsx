@@ -6,9 +6,7 @@ import { Pause, Play } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { CaseStudy } from "./ui/case-study"
-import AboutSection from "./about"
 
-// Carousel data
 const projects = [
   {
     id: 1,
@@ -67,7 +65,7 @@ const slides = [
       "Building robust, scalable software solutions with cutting-edge technologies to solve complex business challenges.",
     bgColor: "bg-white",
     heroImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1476&auto=format&fit=crop",
-    heroImage2: "/girl.png",
+    heroImage2: "/girsl.png",
     Photo: "/Yveslupitu.png",
 
   },
@@ -77,7 +75,7 @@ const slides = [
     description:
       "Designing innovative products that exceed your expectations, focused on quality, user experience and customer satisfaction. And therefore speeding up your growth.",
     bgColor: "bg-white",
-    heroImage2: "/boy.png",
+    heroImage2: "/bo.png",
     heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop",
     Photo: "/Yveslupitu.png",
 
@@ -99,7 +97,7 @@ const slides = [
     description:
       "Strategic guidance and expert advice to optimize your business processes, technology stack, and digital transformation journey.",
     bgColor: "bg-white",
-    heroImage2: "/boy2.png",
+    heroImage2: "/girl3.png",
     heroImage: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=1470&auto=format&fit=crop",
     Photo: "/Yveslupitu.png",
 
@@ -155,7 +153,7 @@ export default function HomepageCarousel() {
             <div className="absolute inset-0 bg-black/40"></div>
           </div> */}
 
-          <div className="relative w-full h-full px-6 md:px-12 lg:px-20 py-12">
+          <div className="relative w-full h-full px-6 md:px-12 lg:pl-[160px] py-12">
             {/* Updated from indigo to #07b6d5 shade */}
             <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-[#07b6d5]/20 -translate-x-1/2 -translate-y-1/2"></div>
 
@@ -258,7 +256,6 @@ export default function HomepageCarousel() {
         </div>
       </div>
     </div>
-      <AboutSection />
 
        <div className="container mx-auto px-4 py-12 md:py-24">
       <CaseStudy
@@ -267,6 +264,6 @@ export default function HomepageCarousel() {
         onAllCasesClick={() => console.log("All cases clicked")}
       />
     </div>
-    </>
+ </>
   )
 }
