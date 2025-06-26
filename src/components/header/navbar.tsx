@@ -186,14 +186,7 @@ const Navbar: React.FC = () => {
 
           <div className="flex items-center justify-center gap-3">
             <div className="relative">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={toggleUserMenu}
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors duration-200"
-              >
-                <User className="h-5 w-5" />
-              </motion.button>
+
               <AnimatePresence>
                 {isUserMenuOpen && (
                   <motion.div
@@ -205,9 +198,9 @@ const Navbar: React.FC = () => {
                       stiffness: 300,
                       damping: 30,
                     }}
-                    className="absolute right-0 mt-2 w-48 rounded-xl bg-white dark:bg-black dark:text-white/90 dark:bg-zinc-950/90 py-3 px-2 shadow-lg backdrop-blur-sm border border-zinc-200/20 dark:border-zinc-700/20"
+                    className="absolute right-0 mt-2 w-48 rounded-xl   dark:text-white/90 dark:bg-zinc-950/90 bg-white/90  py-3 px-2 shadow-lg backdrop-blur-sm border border-zinc-200/20 dark:border-zinc-700/20"
                   >
-                    {navlinks.userMenuItems.map((item, index) => (
+                    {navlinks.navItems.map((item, index) => (
                       <motion.div
                         key={index}
                         whileHover={{ x: 4 }}

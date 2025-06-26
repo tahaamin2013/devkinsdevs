@@ -109,18 +109,7 @@ export function NavLinkMobile() {
             ))}
           </Accordion>
         </div>
-        <div className="fixed bottom-0 left-0 right-0 bg-background border-t p-4 flex justify-between space-x-2">
-          {navlinks.userMenuItems.map((item, index) => (
-            <Link
-              key={index}
-              href={item.href}
-              className="flex-1 py-2 px-4 rounded-md bg-primary/10 text-center text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
+   
       </DrawerContent>
     </Drawer>
   )
